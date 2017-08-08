@@ -1,6 +1,13 @@
 $(function() {
 
+    $("#inputUserName").blur(() => {
+        console.log("test");
+    });
 
 });
 
-let loadSignUP
+let userSignUp = () => {
+
+
+
+};

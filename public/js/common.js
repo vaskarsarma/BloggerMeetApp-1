@@ -19,3 +19,24 @@ let GetCompiledTemplate = (fileName) => {
         .always(function() {});
     return d.promise();
 };
+
+let run_waitMe = (divClass, animation) => {
+    divClass = divClass != null ? divClass : "userInfoDiv";
+    animation = animation != null ? animation : "facebook";
+    $("." + divClass).waitMe({
+        effect: animation,
+        text: "",
+        bg: "rgba(255,255,255,0.7)",
+        color: "#000",
+        sizeW: "",
+        sizeH: "",
+        source: "",
+        onClose: function() {}
+    });
+};
+
+let stop_waitMe = (divClass, animation) => {
+    divClass = divClass != null ? divClass : "userInfoDiv";
+    animation = animation != null ? animation : "timer";
+    $("." + divClass).waitMe("hide");
+};

@@ -15,63 +15,63 @@ router.get("/userregistration", function(req, res) {
 });
 
 
-// router.post("/userregistration", function(req, res) {
-//     var name = req.body.name;
-//     var username = req.body.username;
-//     var email = req.body.email;
-//     var password = req.body.password;
-//     var password2 = req.body.password2;
-//     var admin = "";
-//     req.checkBody('username', 'Username field is required').notEmpty();
-//     req.checkBody('name', 'Name field is required').notEmpty();
-//     req.checkBody('email', 'email field is required').notEmpty();
-//     req.checkBody('email', 'email is not valid').isEmail();
-//     req.checkBody('password', 'password field is required').notEmpty();
-//     req.checkBody('password2', 'confirm password field is required').notEmpty();
-//     req.checkBody('password2', 'password did not match').equals(req.body.password);
+router.post("/userregistration", function(req, res) {
+    var name = req.body.name;
+    var username = req.body.username;
+    var email = req.body.email;
+    var password = req.body.password;
+    var password2 = req.body.password2;
+    var admin = "";
+    req.checkBody('username', 'Username field is required').notEmpty();
+    req.checkBody('name', 'Name field is required').notEmpty();
+    req.checkBody('email', 'email field is required').notEmpty();
+    req.checkBody('email', 'email is not valid').isEmail();
+    req.checkBody('password', 'password field is required').notEmpty();
+    req.checkBody('password2', 'confirm password field is required').notEmpty();
+    req.checkBody('password2', 'password did not match').equals(req.body.password);
 
-//     var errors = req.validationErrors();
+    var errors = req.validationErrors();
 
-//     if (errors) {
-//         res.render('userregistration', {
-//             errors: errors,
-//             username: username,
-//             name: name,
-//             email: email,
-//             password: password,
-//             password2: password2,
-//             admin: admin
-//         });
-//     } else {
+    if (errors) {
+        res.render('userregistration', {
+            errors: errors,
+            username: username,
+            name: name,
+            email: email,
+            password: password,
+            password2: password2,
+            admin: admin
+        });
+    } else {
 
-//         db.get().collection('users').findOne({ username: username }, function(err, info) {
+        db.get().collection('users').findOne({ username: username }, function(err, info) {
 
-//             if (err) {
-//                 res.render('userregistration', { title: 'Sign-up', IsError: true });
-//             } else if (info == null) {
-//                 db.get().collection("users").save({
-//                     "usernamehash": bcrypt.hashSync(username, 10),
-//                     "username": username,
-//                     "name": name,
-//                     "password": bcrypt.hashSync(password, 10),
-//                     "admin": false,
-//                     "email": email,
-//                     "IsEmailVerified": false,
-//                     "active": false,
-//                     "dateTime": new Date().toDateString()
-//                 }, (err, results) => {
-//                     if (err) {
-//                         res.render('userregistration', { title: 'Sign-up', IsError: true });
-//                     } else {
-//                         res.render('userregistration', { title: 'Sign-up', IsUpdated: true });
-//                     }
-//                 });
-//             } else {
-//                 res.render('userregistration', { title: 'Sign-up', IsUserNameAvailable: true });
-//             }
-//         });
+            if (err) {
+                res.render('userregistration', { title: 'Sign-up', IsError: true });
+            } else if (info == null) {
+                db.get().collection("users").save({
+                    "usernamehash": bcrypt.hashSync(username, 10),
+                    "username": username,
+                    "name": name,
+                    "password": bcrypt.hashSync(password, 10),
+                    "admin": false,
+                    "email": email,
+                    "IsEmailVerified": false,
+                    "active": false,
+                    "dateTime": new Date().toDateString()
+                }, (err, results) => {
+                    if (err) {
+                        res.render('userregistration', { title: 'Sign-up', IsError: true });
+                    } else {
+                        res.render('userregistration', { title: 'Sign-up', IsUpdated: true });
+                    }
+                });
+            } else {
+                res.render('userregistration', { title: 'Sign-up', IsUserNameAvailable: true });
+            }
+        });
 
-//     }
+    }
 
 
-// });
+});
