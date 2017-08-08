@@ -35,9 +35,12 @@ app.get('/dashboard', function(req, res) {
     res.render('dashboard', { layout: 'default', title: 'Dashboard Page' });
 });
 
-app.get('/registrationTemplate', function(req, res) {
-    res.render('registrationTemplate', { layout: 'default', title: 'Sign-up Page' });
-});
+// app.get('/userRegistration', function(req, res) {
+//     res.render('userRegistration', { layout: 'default', title: 'Sign-up Page' });
+// });
+
+var userregistration = require('./controllers/userregistration');
+app.use('/auth', userregistration);
 
 app.use(function(req, res, next) {
     res.render('404error', { layout: 'default', title: '404 Page' });

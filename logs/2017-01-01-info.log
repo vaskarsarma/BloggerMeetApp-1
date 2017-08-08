@@ -2,3 +2,5 @@
 {"name":"myapp","hostname":"PC3041570772","pid":9628,"level":50,"msg":"error","time":"2017-08-03T10:10:38.379Z","v":0}
 {"name":"myapp","hostname":"PC3041570772","pid":17268,"level":50,"msg":"error","time":"2017-08-03T10:13:09.162Z","v":0}
 {"name":"myapp","hostname":"PC3041570772","pid":15064,"level":50,"msg":"error","time":"2017-08-03T11:43:01.520Z","v":0}
+{"name":"myapp","hostname":"Lenovo-PC","pid":5720,"level":50,"msg":"error","time":"2017-08-08T17:51:07.957Z","v":0}
+{"name":"myapp","hostname":"Lenovo-PC","pid":5720,"level":50,"msg":"error","time":"2017-08-08T17:53:58.180Z","v":0}
