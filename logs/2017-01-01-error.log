@@ -1,0 +1,8 @@
+{"name":"myapp","hostname":"PC3041570772","pid":10204,"level":50,"msg":"error","time":"2017-08-03T10:03:10.792Z","v":0}
+{"name":"myapp","hostname":"PC3041570772","pid":10204,"level":30,"msg":"info","time":"2017-08-03T10:03:10.793Z","v":0}
+{"name":"myapp","hostname":"PC3041570772","pid":9628,"level":50,"msg":"error","time":"2017-08-03T10:10:38.379Z","v":0}
+{"name":"myapp","hostname":"PC3041570772","pid":9628,"level":30,"msg":"info","time":"2017-08-03T10:10:38.380Z","v":0}
+{"name":"myapp","hostname":"PC3041570772","pid":17268,"level":50,"msg":"error","time":"2017-08-03T10:13:09.162Z","v":0}
+{"name":"myapp","hostname":"PC3041570772","pid":17268,"level":30,"msg":"info","time":"2017-08-03T10:13:09.163Z","v":0}
+{"name":"myapp","hostname":"PC3041570772","pid":15064,"level":50,"msg":"error","time":"2017-08-03T11:43:01.520Z","v":0}
+{"name":"myapp","hostname":"PC3041570772","pid":15064,"level":30,"msg":"info","time":"2017-08-03T11:43:01.521Z","v":0}
