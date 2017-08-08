@@ -21,6 +21,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res) {
+    console.log("");
     //  if (config.has('app.restAPIEndpoint.v1ContractPath')) {
     //         console.log(config.get('app.restAPIEndpoint.v1ContractPath'));
     //         console.log(config.get('app.restAPIEndpoint.v2ContractPath'));
