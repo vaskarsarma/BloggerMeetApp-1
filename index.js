@@ -5,6 +5,7 @@ var exphbs = require("express-handlebars");
 var bodyparser = require("body-parser");
 var config = require("config");
 var log = require("./modellayer/log");
+app.locals.config = config.get('app.restAPIEndpoint.v1ContractPath');
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
