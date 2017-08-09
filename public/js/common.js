@@ -40,3 +40,13 @@ let stop_waitMe = (divClass, animation) => {
     animation = animation != null ? animation : "timer";
     $("." + divClass).waitMe("hide");
 };
+
+let validateEmail = $email => {
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    return emailReg.test($email);
+};
+
+let validateName = $name => {
+    var NameReg = /^[a-zA-Z\s]+$/;
+    return NameReg.test($name);
+};

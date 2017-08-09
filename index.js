@@ -22,11 +22,6 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res) {
-    console.log("");
-    //  if (config.has('app.restAPIEndpoint.v1ContractPath')) {
-    //         console.log(config.get('app.restAPIEndpoint.v1ContractPath'));
-    //         console.log(config.get('app.restAPIEndpoint.v2ContractPath'));
-    //     }
     log.logger.error("error");
     log.logger.info("info");
     res.render('home', { layout: 'default', title: 'Home Page' });
@@ -36,9 +31,9 @@ app.get('/dashboard', function(req, res) {
     res.render('dashboard', { layout: 'default', title: 'Dashboard Page' });
 });
 
-// app.get('/userRegistration', function(req, res) {
-//     res.render('userRegistration', { layout: 'default', title: 'Sign-up Page' });
-// });
+var CommonAPI = require('./modellayer/CommonAPI');
+app.use('/commonapi', CommonAPI);
+
 
 var userregistration = require('./controllers/userregistration');
 app.use('/auth', userregistration);
